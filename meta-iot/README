@@ -1,0 +1,46 @@
+This README file contains information on the contents of the meta-iot layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+The layer depends on:
+
+meta-openembedded/meta-oe
+meta-openembedded/meta-python
+meta-openembedded/meta-networking
+
+-> to be added to conf/bblayers.conf
+
+Patches
+=======
+
+Maintainer: Pierre FICHEUX <pierre.ficheux@gmail.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-iot layer to your build
+ II. Misc
+
+
+I. Adding the meta-iot layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-iot'
+
+II. Misc
+========
+
+1- Add the following line to local.conf
+
+DISTRO_FEATURES_apppend = " wifi"
+
+2- Add the layer
+
+$ bitbake-layer add-layer <path>/meta-iot
+
+3- Build the image (Pi0/W or Pi3)
+
+$ bitbake rpi-iot-image
